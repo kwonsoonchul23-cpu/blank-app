@@ -11,7 +11,9 @@ st.set_page_config(
 )
 
 # Constants
-DATA_PATH = r"C:\anti\260318\202501-air.csv"
+# Use script's directory to find the file locally
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(SCRIPT_DIR, "202501-air.csv")
 
 # Function to load data
 @st.cache_data
